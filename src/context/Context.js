@@ -15,7 +15,6 @@ const ContextProvider = (props) => {
       alert("please fill all the field !");
       return;
     }
-
     const newPassword = {
       title,
       password,
@@ -32,8 +31,20 @@ const ContextProvider = (props) => {
     setAllPassword(newPassowords)
   }
   const passwordEditHandler = (data) => {
-    console.log(data)
-  }
+    const newTitle = prompt("Enter your new title");
+    const newPassword = prompt("Enter your new Password");
+    setAllPassword((prevPasswords) => {
+      return prevPasswords.map(passwordData => {
+        if (passwordData.id === data.id) {
+          return { ...passwordData, title: newTitle, password: newPassword };
+        }
+        return passwordData;
+      });
+    });
+  };
+
+
+  console.log(allPassword)
 
   const modifyPasswords = allPassword.filter((data) => data.title.toLowerCase().includes(search));
 
