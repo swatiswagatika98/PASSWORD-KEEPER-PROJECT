@@ -8,8 +8,6 @@ const PasswordList = () => {
     passwordRemoveHandler,
     passwordEditHandler
   } = useContext(PasswordContext);
-
-
   return (
     <div className="mainList">
       <h1>All Passwords</h1>
