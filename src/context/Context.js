@@ -60,7 +60,8 @@ const ContextProvider = (props) => {
     setAllPassword,
     addPasswordHandler,
     passwordRemoveHandler,
-    passwordEditHandler
+    passwordEditHandler,
+    allPassword
   };
 
   return (

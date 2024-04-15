@@ -8,13 +8,14 @@ const PasswordForm = () => {
     setTitle,
     search,
     setSearch,
-    addPasswordHandler
+    addPasswordHandler,
+   allPassword 
   } = useContext(PasswordContext);
 
   return (
     <div className="mainForm">
       <h1>Password Keeper</h1>
-      <p>Total Passwords : 0</p>
+      <p>Total Passwords : {allPassword.length}</p>
       <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add New Password
       </button>
