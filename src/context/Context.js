@@ -13,7 +13,7 @@ const ContextProvider = (props) => {
     e.preventDefault();
     if (!title || !password) {
       alert("please fill all the field !");
-      return;
+      return; 
     }
     const newPassword = {
       title,
@@ -24,7 +24,6 @@ const ContextProvider = (props) => {
     setTitle("");
     setPassword("");
   }
-
 
   const passwordRemoveHandler = (id) => {
     const newPassowords = allPassword.filter((data) => data.id !== id);
@@ -43,11 +42,9 @@ const ContextProvider = (props) => {
     });
   };
 
-
   console.log(allPassword)
 
   const modifyPasswords = allPassword.filter((data) => data.title.toLowerCase().includes(search));
-
 
   const value = {
     password,
